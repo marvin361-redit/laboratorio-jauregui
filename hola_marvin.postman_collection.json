@@ -5,10 +5,31 @@
   },
   "item": [
     {
-      "name": "Hola Marvin",
+      "name": "Hola por ruta",
       "request": {
         "method": "GET",
         "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/hola/Marvin/",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["hola", "Marvin", ""]
+        }
+      }
+    },
+    {
+      "name": "Hola por JSON",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nombre\": \"Marvin\"}",
+          "options": { "raw": { "language": "json" } }
+        },
         "url": {
           "raw": "http://127.0.0.1:8000/hola/",
           "protocol": "http",
